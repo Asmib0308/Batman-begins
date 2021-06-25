@@ -3,7 +3,7 @@ class Umbrella {
         var options = {
             isStatic: true,
         }
-        this.image = loadAnimation("images/Walking Frame/walking_1.png","images/Walking Frame/walking_2.png","images/Walking Frame/walking_3.png","images/Walking Frame/walking_4.png","images/Walking Frame/walking_5.png","images/Walking Frame/walking_6.png","images/Walking Frame/walking_7.png","images/Walking Frame/walking_8.png");
+        this.image = loadImage("images/Walking Frame/walking_1.png");
         this.umbrella = Bodies.circle(x,y,50,options);
         this.radius = 50;
         World.add(world, this.umbrella)
@@ -11,7 +11,7 @@ class Umbrella {
 
     display(){
         var pos = this.umbrella.position;
-        //imageMode(CENTER);
-        animation(this.image,pos.x,pos.y+70,300,300);
+        imageMode(CENTER);
+        image(this.image,pos.x,pos.y+70,300,300);
     }
 }
